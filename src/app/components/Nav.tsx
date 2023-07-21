@@ -27,7 +27,7 @@ export function Nav() {
             activeClass='active'
             smooth={true}
             spy={true}
-            className="cursor-pointer w-[60px] h-[60px] flex items-center           justify-center"
+            className="cursor-pointer w-[60px] h-[60px] flex items-center justify-center"
           >
             <BiUser />
           </Link>
@@ -36,7 +36,7 @@ export function Nav() {
             activeClass='active'
             smooth={true}
             spy={true}
-            className="cursor-pointer w-[60px] h-[60px] flex items-center           justify-center"
+            className="cursor-pointer w-[60px] h-[60px] flex items-center justify-center"
           >
             <BsClipboardData />
           </Link>
@@ -45,7 +45,7 @@ export function Nav() {
             activeClass='active'
             smooth={true}
             spy={true}
-            className="cursor-pointer w-[60px] h-[60px] flex items-center           justify-center"
+            className="cursor-pointer w-[60px] h-[60px] flex items-center justify-center"
           >
             <BsBriefcase />
           </Link>
@@ -54,7 +54,7 @@ export function Nav() {
             activeClass='active'
             smooth={true}
             spy={true}
-            className="cursor-pointer w-[60px] h-[60px] flex items-center           justify-center"
+            className="cursor-pointer w-[60px] h-[60px] flex items-center justify-center"
           >
             <BsChatSquareText />
           </Link>

@@ -1,12 +1,14 @@
 "use client"
 // Icons
-import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa'
+import { FaGithub, FaLinkedin } from 'react-icons/fa'
 // Type Animation
 import { TypeAnimation } from 'react-type-animation'
 // Motion
 import { motion } from 'framer-motion'
 // Variants
 import { fadeIn } from '../variants'
+// react scroll
+import { Link } from "react-scroll"
 
 export function Banner() {
   return (
@@ -16,30 +18,38 @@ export function Banner() {
         lg:gap-x-12'>
           <div className='flex-1 text-center font-secondary lg:text-left'>
             <motion.h1
-              variants={fadeIn('up', 0.3)}
+              variants={fadeIn('up', 0.1)}
               initial="hidden"
               whileInView={'show'}
               viewport={{ once: false, amount: 0.7 }}
-              className='text-[55px] font-bold leading-[0.8] lg:text-[90px]'
+              className='text-[25px] mb-2 ml-1 text-accent font-semibold'
+            >
+              Hi, my name is
+            </motion.h1>
+
+            <motion.h1
+              variants={fadeIn('up', 0.2)}
+              initial="hidden"
+              whileInView={'show'}
+              viewport={{ once: false, amount: 0.7 }}
+              className='text-[55px] font-bold leading-[0.8] lg:text-[90px] m-0'
             >
               Daniel <span>Breda</span>
             </motion.h1>
 
             <motion.div
               className='mb-6 text-[36px] lg:text-[50px] font-secondary font-semibold uppercase leading-[1]'
-              variants={fadeIn('up', 0.3)}
+              variants={fadeIn('up', 0.2)}
               initial="hidden"
               whileInView={'show'}
               viewport={{ once: false, amount: 0.7 }}
             >
-              <span className='text-white mr-3'>I am a</span>
+              <span className='text-white mr-3'>I</span>
               <TypeAnimation 
                 sequence={[
-                  'Software Engineer',
+                  'am a Software Engineer',
                   2000,
-                  'Fullstack Developer',
-                  2000,
-                  'Musical Productor',
+                  'Build things for the web',
                   2000,
                 ]} 
                 speed={50}
@@ -50,55 +60,59 @@ export function Banner() {
             </motion.div>
 
             <motion.p 
-              className='mb-8 max-w-lg mx-auto lg:mx-0'
-              variants={fadeIn('up', 0.5)}
+              className='mb-8 max-w-3xl mx-auto lg:mx-0'
+              variants={fadeIn('up', 0.4)}
               initial="hidden"
               whileInView={'show'}
               viewport={{ once: false, amount: 0.7 }}
             >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem hic voluptates illo itaque est illum nemo esse! Molestiae nemo consectetur aut illo ad at sequi recusandae, accusamus cum architecto neque?
+              I am a dedicated and highly qualified self-taught programmer.
+              passionate about acquiring new knowledge and taking on new challenges,
+              I always seek to work with the best practices, solutions and technologies to improve the efficiency and quality of the projects I work on.
             </motion.p>
                 
             <motion.div 
               className='flex max-w-max gap-x-6 items-center mb-12 mx-auto lg:mx-0'
-              variants={fadeIn('up', 0.6)}
+              variants={fadeIn('up', 0.5)}
               initial="hidden"
               whileInView={'show'} 
               viewport={{ once: false, amount: 0.7 }} 
             >
-              <button className='btn btn-lg'>Contact me</button>
-              <a href="#" className='text-gradient btn-link'>
-                My Portfolio
-              </a>
+             <Link
+               to="contact"
+               smooth={true}
+               spy={true}
+             >
+                <button className='btn btn-lg'>Contact me</button>
+              </Link>
+
+              <Link 
+                to="services"
+                spy={true}
+                smooth={true}
+              >
+                <p className='text-gradient btn-link cursor-pointer'>
+                  My Portfolio
+                </p>
+              </Link>
+              
             </motion.div>
 
             <motion.div 
               className='flex text-[20px] gap-x-6 max-w-max mx-auto lg:mx-0'
-              variants={fadeIn('up', 0.7)}
+              variants={fadeIn('up', 0.6)}
               initial="hidden"
               whileInView={'show'}
               viewport={{ once: false, amount: 0.7 }}
             >
-              <a href="#">
+              <a href="https://www.linkedin.com/in/danielfelipedeveloper/" target='blank'>
                 <FaLinkedin />
               </a>
-              <a href="#">
+              <a href="https://github.com/DanielFelipeDeveloper" target='blank'>
                 <FaGithub />
-              </a>
-              <a href="#">
-                <FaTwitter />
               </a>
             </motion.div>
           </div>
-
-          <motion.div 
-            className='hidden lg:flex flex-1 max-w-[320px] lg:max-w-[482px]'
-            variants={fadeIn('down', 0.5)}
-            initial="hidden"
-            whileInView={'show'} 
-          >
-            <img src='/assets/avatar.svg' alt="avatar" />
-          </motion.div>
         </div>
       </div>
     </section>
