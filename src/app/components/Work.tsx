@@ -6,15 +6,16 @@ import { fadeIn } from '../variants'
 
 export function Work() {
   return (
-    <section className="section" id="work">
+    <section className="section">
       <div className="container mx-auto">
         <div className="flex flex-col lg:flex-row gap-x-10">
           <motion.div
+            id="work"
             variants={fadeIn('right', 0.5)}
             initial="hidden"
             whileInView={"show"}
             viewport={{ once: false, amount: 0.3 }}
-            className="flex-1 flex flex-col gap-y-12 mb-10 lg:mb-0 mt-auto"
+            className="flex-1 flex flex-col gap-y-12 mb-10 lg:mb-0 mt-auto pt-20"
           >
             <div>
               <h2 className="h2 leading-tight text-accent">

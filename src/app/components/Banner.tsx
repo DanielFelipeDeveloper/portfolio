@@ -22,7 +22,7 @@ export function Banner() {
               initial="hidden"
               whileInView={'show'}
               viewport={{ once: false, amount: 0.7 }}
-              className='text-[25px] mb-2 ml-1 text-accent font-semibold'
+              className='text-[25px] mb-4 ml-1 text-accent font-semibold'
             >
               Hi, my name is
             </motion.h1>
@@ -32,30 +32,30 @@ export function Banner() {
               initial="hidden"
               whileInView={'show'}
               viewport={{ once: false, amount: 0.7 }}
-              className='text-[55px] font-bold leading-[0.8] lg:text-[90px] m-0'
+              className='text-[55px] font-bold leading-[0.8] lg:text-[90px] mb-4'
             >
               Daniel <span>Breda</span>
             </motion.h1>
 
             <motion.div
-              className='mb-6 text-[36px] lg:text-[50px] font-secondary font-semibold uppercase leading-[1]'
+              className='mb-6 text-[36px] lg:text-[50px] font-secondary font-semibold leading-[1]'
               variants={fadeIn('up', 0.2)}
               initial="hidden"
               whileInView={'show'}
               viewport={{ once: false, amount: 0.7 }}
             >
-              <span className='text-white mr-3'>I</span>
+              <span className='text-gray-400 mr-3'>I</span>
               <TypeAnimation 
                 sequence={[
                   'am a Software Engineer',
                   2000,
-                  'Build things for the web',
+                  'Build things for the web.',
                   2000,
                 ]} 
                 speed={50}
-                className='text-accent'
+                className='text-gray-400'
                 wrapper='span'
-                repeat={Infinity}
+                repeat={1}
               />
             </motion.div>
 
