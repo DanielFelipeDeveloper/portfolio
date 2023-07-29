@@ -1,3 +1,4 @@
+'use client'
 import { Aldrich, Orbitron, Rajdhani } from 'next/font/google';
 import { ReactNode } from 'react';
 import './globals.css';
@@ -23,10 +24,17 @@ export default function RootLayout({
 }: {
   children: ReactNode
 }) {
+
+  const fonts = `${orbitron.variable} ${rajdhani.variable} ${aldrich.variable}`;
+
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/favicon.ico" sizes="" />
+      </head>
+      
       <body 
-        className={`${orbitron.variable} ${rajdhani.variable} ${aldrich.variable}`}
+        className={`${fonts}`}
       >
         {children}
       </body>

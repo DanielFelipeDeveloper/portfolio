@@ -35,7 +35,7 @@ export function Work() {
               <div className="group-hover:bg-black/70 w-full h-full absolute
               z-40 transition-all duration-300"/>
 
-              <img src="assets/portfolio-img1.png" alt="image" className="group-hover:scale-125 transition-all duration-500"/>
+              <img src="assets/project-1.png" alt="image" className="group-hover:scale-125 transition-all duration-500"/>
 
               <div className="absolute -bottom-full left-12
               group-hover:bottom-24 transition-all duration-500 z-50">

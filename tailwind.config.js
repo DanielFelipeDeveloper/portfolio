@@ -17,18 +17,16 @@ module.exports = {
       },
     },
     screens: {
-      sm: '640px',
+      sm: '480px',
       md: '768px',
-      lg: '960px',
-      xl: '1200px',
+      lg: '1080px',
     },
     extend: {
       colors: {
         primary: '#0a0a0a',
-        accent: '#B809C3',
+        accent: '#38bdf8',
       },
       backgroundImage: {
-        site: "url('../../public/assets/site-bg.jpg')",
         about: "url('../../public/assets/me.png')",
         services: "url('../../public/assets/laptop.png')",
       },

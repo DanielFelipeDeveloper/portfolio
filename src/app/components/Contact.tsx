@@ -1,6 +1,7 @@
 "use client"
 
 import { motion } from 'framer-motion'
+import { BiPhone } from 'react-icons/bi'
 import { fadeIn } from '../variants'
 
 export function Contact() {
@@ -20,9 +21,14 @@ export function Contact() {
               tracking-wide">
                 Get in touch
               </h4>
-              <h2 className="text-[45px] lg:text-[90px] leading-none mb-12">
+              <h2 className="text-[45px] lg:text-[90px] leading-none mb-4">
                 Let's work <br /> together!
               </h2>
+
+              <div className='flex items-center mb-8 gap-1'>
+                <BiPhone fontSize={24}/>
+                <h5>+353 83 473 0864</h5>
+              </div>
             </div>
           </motion.div>
 

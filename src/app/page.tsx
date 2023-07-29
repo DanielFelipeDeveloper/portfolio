@@ -1,22 +1,44 @@
-import { About } from "./components/About";
+'use client'
+import { useEffect, useState } from "react";
 import { Banner } from "./components/Banner";
-import { Contact } from "./components/Contact";
 import { Header } from "./components/Header";
-import { Nav } from "./components/Nav";
-import { Services } from "./components/Services";
-import { Work } from "./components/Work";
 
 export default function Home() {
+  const [menuIsOpen, setMenuIsOpen] = useState(false);
+
+  const toggleMenu = () => setMenuIsOpen(!menuIsOpen);
+
+  const handleResize = (e: UIEvent) => {
+    const w = e.currentTarget as Window;
+
+    if (w.innerWidth > 768) {
+      setMenuIsOpen(false);
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  })
+
   return (
-    <div className="bg-site bg-no-repeat bg-cover overflow-hidden">
-      <Header />
-      <Banner />
-      <Nav />
-      <About />
-      <Services />
-      <Work />
-      <Contact />
-      <div className="h-52"/>
-    </div>
+    <>
+      <Header menuIsOpen={menuIsOpen} toggleMenu={toggleMenu} />
+      
+      <div 
+        className={`${menuIsOpen && 'blur overflow-hidden max-h-screen h-full'}`}
+      >
+        <Banner />
+        {/* <Nav /> */}
+        {/* <About /> */}
+        {/* <Services />
+        <Work />
+        <Contact />
+        <div className="h-52"/> */}
+      </div>
+    </>
   )
 }
