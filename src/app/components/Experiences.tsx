@@ -23,7 +23,7 @@ const services = [
   },
 ]
 
-export function Services() {
+export function Experiences() {
   return (
     <section className="section" id="services">
       <div className="container mx-auto">
@@ -35,15 +35,15 @@ export function Services() {
             viewport={{ once: false, amount: 0.3 }}
             className="flex-1 lg:bg-services lg:bg-bottom bg-no-repeat mix-blend-lighten mb-12 lg:mb-0"
           >
-            <h2 className="h2 text-accent mb-6">Experience</h2>
+            <h2 className="h2 text-accent mb-6">Experiences</h2>
             {/* <h3 className="h3 max-w-[455px] mb-16">Fullstack Development</h3> */}
             <Link
-               to="work"
-               smooth={true}
-               spy={true}
-             >
-                <button className="btn btn-sm">See my work</button>
-              </Link>
+              to="work"
+              smooth={true}
+              spy={true}
+            >
+              <button className="btn btn-sm">See my work</button>
+            </Link>
           </motion.div>
 
           <motion.div 
@@ -60,16 +60,16 @@ export function Services() {
                 return (
                   <div 
                     key={name} 
-                    className="border-b border-white/20 h-[265px] mb-[38px]
+                    className="border-b border-white/20 h-auto pb-4 mb-[20px]
                     flex"
                   >
                     <div className='max-w-[476px]'>
-                      <h4 className="text-[20px] tracking-wider
+                      <h4 className="text-lg lg:text-[20px] tracking-wider
                       font-semibold">
                         {name}
                       </h4>
-                      <h5 className='mb-4 text-gray-300 leading-tight'>{date}</h5>
-                      <p className="font-secondary leading-tight">
+                      <h5 className='mb-4 text-sm lg:text-base text-gray-300 leading-tight'>{date}</h5>
+                      <p className="font-secondary text-base lg:text-lg leading-tight">
                         {description}
                       </p>
                     </div>

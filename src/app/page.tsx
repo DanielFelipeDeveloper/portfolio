@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { About } from "./components/About";
 import { Banner } from "./components/Banner";
+import { Experiences } from "./components/Experiences";
 import { Header } from "./components/Header";
 
 export default function Home() {
@@ -35,10 +36,10 @@ export default function Home() {
         <Banner />
         {/* <Nav /> */}
         <About />
-        {/* <Services />
-        <Work />
-        <Contact />
-        <div className="h-52"/> */}
+        <Experiences />
+        {/* <Work />
+        <Contact /> */}
+        {/* <div className="h-52"/> */}
       </div>
     </>
   )
