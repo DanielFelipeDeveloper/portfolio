@@ -18,7 +18,7 @@ export function About() {
   return (
     <div className="section" ref={ref} id="about">
       <div className="container mx-auto">
-        <div className='flex flex-col gap-y-5 lg:flex-row lg:items-center
+        <div className='flex flex-col lg:flex-row lg:items-center
         lg:gap-x-20 lg:gap-y-0'>
 
           <motion.div 
@@ -40,18 +40,18 @@ export function About() {
               viewport={{ once: false, amount: 0.3 }}
               className='grid grid-cols-3 my-4'
             >
-              <li className='flex items-center text-slate-400'><AiOutlineCaretRight color="#38BDF8" fontSize={10} /> Javascript (ES6+)</li>
-              <li className='flex items-center text-slate-400'><AiOutlineCaretRight color="#38BDF8" fontSize={10} /> Typescript</li>
-              <li className='flex items-center text-slate-400'><AiOutlineCaretRight color="#38BDF8" fontSize={10} /> React</li>
-              <li className='flex items-center text-slate-400'><AiOutlineCaretRight color="#38BDF8" fontSize={10} /> NextJS</li>
-              <li className='flex items-center text-slate-400'><AiOutlineCaretRight color="#38BDF8" fontSize={10} /> React Native</li>
-              <li className='flex items-center text-slate-400'><AiOutlineCaretRight color="#38BDF8" fontSize={10} /> Node.js</li>
-              <li className='flex items-center text-slate-400'><AiOutlineCaretRight color="#38BDF8" fontSize={10} /> Nest.js</li>
-              <li className='flex items-center text-slate-400'><AiOutlineCaretRight color="#38BDF8" fontSize={10} /> SQL</li>
-              <li className='flex items-center text-slate-400'><AiOutlineCaretRight color="#38BDF8" fontSize={10} /> MongoDB</li>
+              <li className='flex items-center text-slate-400'><AiOutlineCaretRight color="#38BDF8" fontSize={8} /> Javascript (ES6+)</li>
+              <li className='flex items-center text-slate-400'><AiOutlineCaretRight color="#38BDF8" fontSize={8} /> Typescript</li>
+              <li className='flex items-center text-slate-400'><AiOutlineCaretRight color="#38BDF8" fontSize={8} /> React</li>
+              <li className='flex items-center text-slate-400'><AiOutlineCaretRight color="#38BDF8" fontSize={8} /> NextJS</li>
+              <li className='flex items-center text-slate-400'><AiOutlineCaretRight color="#38BDF8" fontSize={8} /> React Native</li>
+              <li className='flex items-center text-slate-400'><AiOutlineCaretRight color="#38BDF8" fontSize={8} /> Node.js</li>
+              <li className='flex items-center text-slate-400'><AiOutlineCaretRight color="#38BDF8" fontSize={8} /> Nest.js</li>
+              <li className='flex items-center text-slate-400'><AiOutlineCaretRight color="#38BDF8" fontSize={8} /> SQL</li>
+              <li className='flex items-center text-slate-400'><AiOutlineCaretRight color="#38BDF8" fontSize={8} /> MongoDB</li>
             </motion.ul>
 
-            <div className='flex gap-x-6 lg:gap-x-10 mb-12'>
+            <div className='flex gap-x-6 lg:gap-x-10 mt-6'>
               <div>
                 <div 
                   className='text-[40px] font-tertiary text-gradient mb-2'
@@ -80,21 +80,6 @@ export function About() {
                   Completed
                 </div>
               </div>
-              
-              {/* <div>
-                <div 
-                  className='text-[40px] font-tertiary text-gradient mb-2'
-                >
-                  +
-                  {
-                    inView ? <CountUp start={0} end={5} duration={3} /> : null
-                  }
-                </div>
-                <div className='font-primary text-sm tracking-[2px]'>
-                  Satisfied <br />
-                  Clients
-                </div>
-              </div> */}
             </div>
           </motion.div>
 

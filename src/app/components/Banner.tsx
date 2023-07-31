@@ -10,7 +10,7 @@ import { Link } from "react-scroll"
 
 export function Banner() {
   return (
-    <section className=" section items-start min-h-screen h-screen mt-24" id="home">
+    <section className="section items-start min-h-screen h-full mt-24" id="home">
       <div className="container mx-auto">
         <div className='flex flex-row gap-y-8 items-center gap-x-12'>
           <div className='flex-1 text-left font-secondary'>
@@ -58,7 +58,7 @@ export function Banner() {
             </motion.div>
 
             <motion.p 
-              className='mb-8 max-w-xl lg:mx-0 text-[18px]'
+              className='mb-8 max-w-xl lg:mx-0'
               variants={fadeIn('up', 0.4)}
               initial="hidden"
               whileInView={'show'}
@@ -81,17 +81,17 @@ export function Banner() {
               >
                 <button className='btn btn-lg'>Contact me</button>
               </Link>
-{/* 
-              <Link 
+
+              {/* <Link 
                 to="services"
                 spy={true}
                 smooth={true}
               >
-                <p className='text-gradient btn-link cursor-pointer'>
+                <p className='text-gradient-link btn-link cursor-pointer'>
                   My Portfolio
                 </p>
-              </Link>
-               */}
+              </Link> */}
+              
             </motion.div>
           </div>
         </div>

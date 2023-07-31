@@ -1,5 +1,6 @@
 'use client'
 import { useEffect, useState } from "react";
+import { About } from "./components/About";
 import { Banner } from "./components/Banner";
 import { Header } from "./components/Header";
 
@@ -33,7 +34,7 @@ export default function Home() {
       >
         <Banner />
         {/* <Nav /> */}
-        {/* <About /> */}
+        <About />
         {/* <Services />
         <Work />
         <Contact />
