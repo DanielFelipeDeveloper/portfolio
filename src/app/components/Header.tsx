@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { AiOutlineClose } from "react-icons/ai";
 import { BiMenuAltRight } from "react-icons/bi";
-import { Link as ScrollLink } from 'react-scroll';
+import ScrollInto from "react-scroll-into-view";
 import useScrollDirection from "../hooks/useScrollDirection";
 import { Menu } from "./Menu";
 
@@ -29,6 +29,26 @@ export function Header({ toggleMenu, menuIsOpen }: HeaderProps) {
 
   const handleScroll = () => {
     setScrolledToTop(window.pageYOffset < 50);
+
+    const sections = document.querySelectorAll("section");
+    const navLi = document.querySelectorAll("nav #navbar-default ul li");
+
+    let currentSection: any;
+
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop;
+      if (window.pageYOffset >= sectionTop - 400) {
+        
+        currentSection = section.getAttribute("id"); }
+    });
+
+    navLi.forEach((li) => {
+      li.classList.remove("active");
+      
+      if (li.classList.contains(currentSection)) {
+        li.classList.add("active");
+      }
+    });
   };
 
   useEffect(() => {
@@ -40,12 +60,12 @@ export function Header({ toggleMenu, menuIsOpen }: HeaderProps) {
   }, []);
 
   return (
-    <div className={`header ${headerDynamicClass} flex justify-between items-center px-4 md:px-14`}>
+    <nav className={`header ${headerDynamicClass} flex justify-between items-center px-4 md:px-14`}>
       <Link href="/">
         <img src="/assets/logo.svg" alt="logo" className="h-9" />
       </Link>
 
-      { menuIsOpen && <Menu /> }
+      { menuIsOpen && <Menu toggleMenu={toggleMenu} /> }
 
       <button
         data-collapse-toggle="navbar-default"
@@ -64,22 +84,19 @@ export function Header({ toggleMenu, menuIsOpen }: HeaderProps) {
           {NavLinks.map(item => (
             <ul key={item.name} className="p-0 m-0 list-none">
               <li
-                className="relative text-base"
+                className={`relative text-base ${item.link}`}
               >
-                <ScrollLink
+                <ScrollInto 
+                  selector={`#${item.link}`}
                   smooth
-                  spy
-                  to={item.link}
                   className="p-2 font-medium transition-all hover:text-sky-400 cursor-pointer"
                 >
                   {item.name}
-                </ScrollLink>
+                </ScrollInto>
               </li>
             </ul>
-
           ))}
         </div>
-
         <a
           className="btn btn-sm flex items-center ml-6"
           href="/Resume.pdf"
@@ -88,6 +105,6 @@ export function Header({ toggleMenu, menuIsOpen }: HeaderProps) {
           Resume
         </a>
       </div> 
-    </div>
+    </nav>
   )
 }

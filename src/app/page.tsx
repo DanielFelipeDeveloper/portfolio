@@ -2,8 +2,10 @@
 import { useEffect, useState } from "react";
 import { About } from "./components/About";
 import { Banner } from "./components/Banner";
-import { Experiences } from "./components/Experiences";
+import { Contact } from "./components/Contact";
+import { Experience } from "./components/Experience";
 import { Header } from "./components/Header";
+import { Work } from "./components/Work";
 
 export default function Home() {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
@@ -31,15 +33,13 @@ export default function Home() {
       <Header menuIsOpen={menuIsOpen} toggleMenu={toggleMenu} />
       
       <div 
-        className={`${menuIsOpen && 'blur overflow-hidden max-h-screen h-full'}`}
+        className={`${menuIsOpen && 'blur overflow-hidden h-full'}`}
       >
         <Banner />
-        {/* <Nav /> */}
         <About />
-        <Experiences />
-        {/* <Work />
-        <Contact /> */}
-        {/* <div className="h-52"/> */}
+        <Experience />
+        <Work />
+        <Contact />
       </div>
     </>
   )

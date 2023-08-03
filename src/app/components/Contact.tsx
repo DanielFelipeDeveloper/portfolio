@@ -1,12 +1,11 @@
 "use client"
-
 import { motion } from 'framer-motion'
 import { BiPhone } from 'react-icons/bi'
 import { fadeIn } from '../variants'
 
 export function Contact() {
   return (
-    <section className="py-16" id="contact">
+    <section className="section" id="contact">
       <div className="container mx-auto">
         <div className="flex flex-col lg:flex-row">
           <motion.div 
@@ -37,7 +36,7 @@ export function Contact() {
             initial="hidden"
             whileInView={"show"}
             viewport={{ once: false, amount: 0.3 }}
-            className="flex-1 border rounded-2xl flex flex-col gap-y-6 pb-18 p-6 items-start"
+            className="flex-1 border rounded-2xl flex flex-col gap-y-6 mt-10 pb-18 p-6 items-start"
           >
             <input
               className="bg-transparent border-b py-3 outline-none w-full

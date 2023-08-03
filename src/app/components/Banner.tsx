@@ -6,11 +6,11 @@ import { motion } from 'framer-motion'
 // Variants
 import { fadeIn } from '../variants'
 // react scroll
-import { Link } from "react-scroll"
+import ScrollInto from 'react-scroll-into-view'
 
 export function Banner() {
   return (
-    <section className="section items-start min-h-screen h-full mt-24" id="home">
+    <section className="section items-start min-h-screen h-full mt-28" id="home">
       <div className="container mx-auto">
         <div className='flex flex-row gap-y-8 items-center gap-x-12'>
           <div className='flex-1 text-left font-secondary'>
@@ -74,24 +74,21 @@ export function Banner() {
               whileInView={'show'} 
               viewport={{ once: false, amount: 0.7 }} 
             >
-              <Link
-                to="contact"
-                smooth={true}
-                spy={true}
+              <ScrollInto 
+                selector='#contact'
+                smooth
               >
-                <button className='btn btn-lg'>Contact me</button>
-              </Link>
+                 <button className='btn btn-lg'>Contact me</button>
+              </ScrollInto>
 
-              {/* <Link 
-                to="services"
-                spy={true}
-                smooth={true}
+              <ScrollInto 
+                selector="#experience"
+                smooth
               >
                 <p className='text-gradient-link btn-link cursor-pointer'>
-                  My Portfolio
+                  Experience
                 </p>
-              </Link> */}
-              
+              </ScrollInto>
             </motion.div>
           </div>
         </div>

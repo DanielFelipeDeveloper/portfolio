@@ -111,6 +111,6 @@ html {
     @apply font-normal font-tertiary text-xl;
   }
   .section {
-    @apply flex items-center lg:px-24 md:px-12 sm:px-6 py-12 lg:py-16;
+    @apply flex items-center lg:px-24 md:px-12 sm:px-6 py-12 lg:py-20;
   }
 }

@@ -1,4 +1,4 @@
-import { Link as ScrollLink } from 'react-scroll';
+import ScrollInto from 'react-scroll-into-view';
 
 const NavLinks = [
   { "name": "About", "link": "about" },
@@ -7,11 +7,15 @@ const NavLinks = [
   { "name": "Contact", "link": "contact" },
 ];
 
-export function Menu() {
+interface MenuProps {
+  toggleMenu: () => void;
+}
+
+export function Menu({ toggleMenu }: MenuProps) {
   return (
       <nav 
-        className="menu flex fixed top-0 bottom-0 right-0 py-12 px-2 w-[70vw] 
-        max-w-sm h-screen z-10 bg-[#112240] translate-x-[0vw]"
+        className="menu flex fixed top-0 right-0 px-2 w-[70vw] 
+        max-w-sm max-h-screen h-screen z-10 bg-[#112240]"
       >
         <div className='w-full flex flex-col gap-10 text-center justify-center'>
           {NavLinks.map(item => (
@@ -19,14 +23,14 @@ export function Menu() {
                 <li
                   className="text-2xl"
                 >
-                  <ScrollLink
+                  <ScrollInto
+                    selector={`#${item.link}`}
+                    className="p-2 font-medium transition-all hover:text-sky-400 cursor-pointer"
                     smooth
-                    spy
-                    to={item.link}
-                    className="font-medium transition-all hover:text-sky-400 cursor-pointer"
+                    onClick={toggleMenu}
                   >
                     {item.name}
-                  </ScrollLink>
+                  </ScrollInto>
                 </li>
               </ul>
           ))}
