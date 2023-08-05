@@ -1,13 +1,14 @@
 "use client"
+import { motion } from 'framer-motion';
 import Link from "next/link";
-import { useEffect, useState } from "react";
-import { AiOutlineClose } from "react-icons/ai";
-import { BiMenuAltRight } from "react-icons/bi";
+import { useEffect, useRef, useState } from "react";
 import ScrollInto from "react-scroll-into-view";
 import useScrollDirection from "../hooks/useScrollDirection";
-import { Menu } from "./Menu";
+import { Menu } from './Menu';
+import { MenuToggle } from "./Menu/MenuToggle";
+import { useDimensions } from "./Menu/use-dimensions";
 
-const NavLinks = [
+export const NavLinks = [
   { "name": "About", "link": "about" },
   { "name": "Experience", "link": "experience" },
   { "name": "Work", "link": "work" },
@@ -21,11 +22,13 @@ interface HeaderProps {
 
 export function Header({ toggleMenu, menuIsOpen }: HeaderProps) {
   const scrollDirection = useScrollDirection('down');
+  const containerRef = useRef(null);
+  const { height } = useDimensions(containerRef);
   const [scrolledToTop, setScrolledToTop] = useState(true);
-
+  
   const headerDynamicClass =  scrollDirection === 'up' &&
   !scrolledToTop ? 'scroll-up' :  scrollDirection === 'down' &&
-  !scrolledToTop && 'scroll-down'
+  !scrolledToTop && 'scroll-down';
 
   const handleScroll = () => {
     setScrolledToTop(window.pageYOffset < 50);
@@ -60,24 +63,22 @@ export function Header({ toggleMenu, menuIsOpen }: HeaderProps) {
   }, []);
 
   return (
-    <nav className={`header ${headerDynamicClass} flex justify-between items-center px-4 md:px-14`}>
+    <nav className={`header ${headerDynamicClass} flex justify-between items-center align-middle px-4 md:px-14`}>
       <Link href="/">
         <img src="/assets/logo.svg" alt="logo" className="h-9" />
       </Link>
 
-      { menuIsOpen && <Menu toggleMenu={toggleMenu} /> }
-
-      <button
-        data-collapse-toggle="navbar-default"
-        type="button"
-        className="md:hidden focus:outline-none z-20"
-        aria-controls="navbar-default"
-        aria-expanded="false"
-        onClick={toggleMenu}
+      <motion.div 
+        className="z-50 flex items-center"
+        initial={false}
+        animate={menuIsOpen ? "open" : "closed"}
+        custom={height}
+        ref={containerRef}
       >
-        <span className="sr-only">Open main menu</span>
-        {menuIsOpen ? <AiOutlineClose size={36} color="#38bdf8" /> : <BiMenuAltRight size={40} color="#38bdf8" /> }
-      </button>
+        <MenuToggle toggle={toggleMenu}/>
+      </motion.div>
+
+      { menuIsOpen && <Menu toggleMenu={toggleMenu} /> }
 
       <div className="hidden w-full md:flex md:w-auto items-center" id="navbar-default">
         <div className="flex items-center gap-5">

@@ -11,7 +11,7 @@ interface MenuProps {
   toggleMenu: () => void;
 }
 
-export function Menu({ toggleMenu }: MenuProps) {
+export function Menu2({ toggleMenu }: MenuProps) {
   return (
       <nav 
         className="menu flex fixed top-0 right-0 px-2 w-[70vw] 
