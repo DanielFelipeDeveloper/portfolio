@@ -5,6 +5,7 @@ import { Banner } from "./components/Banner";
 import { Contact } from "./components/Contact";
 import { Experience } from "./components/Experience";
 import { Header } from "./components/Header";
+import { Social } from "./components/Social";
 import { Work } from "./components/Work";
 
 export default function Home() {
@@ -40,6 +41,7 @@ export default function Home() {
         <Experience />
         <Work />
         <Contact />
+        <Social />
       </div>
     </>
   )
