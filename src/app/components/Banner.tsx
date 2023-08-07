@@ -10,7 +10,7 @@ import ScrollInto from 'react-scroll-into-view'
 
 export function Banner() {
   return (
-    <section className="section items-start min-h-screen h-full mt-28" id="home">
+    <section className="section items-start mt-16" id="home">
       <div className="container mx-auto">
         <div className='flex flex-row gap-y-8 items-center gap-x-12'>
           <div className='flex-1 text-left font-secondary'>
@@ -43,17 +43,15 @@ export function Banner() {
             >
               <TypeAnimation 
                 sequence={[
-                  'I am a Software Engineer.',
-                  2000,
                   'I build things for the web.',
                   2000,
-                  'I am a Music Producer.',
+                  'I am a Software Engineer.',
                   2000,
                 ]} 
                 speed={50}
                 className='text-slate-400'
                 wrapper='span'
-                repeat={Infinity}
+                repeat={0}
               />
             </motion.div>
 

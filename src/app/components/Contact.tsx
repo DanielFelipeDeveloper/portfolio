@@ -5,7 +5,7 @@ import { fadeIn } from '../variants'
 
 export function Contact() {
   return (
-    <section className="section mb-24" id="contact">
+    <section className="section pb-64" id="contact">
       <div className="container mx-auto">
         <div className="flex flex-col lg:flex-row">
           <motion.div 

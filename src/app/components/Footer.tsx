@@ -3,13 +3,13 @@ import { SocialList } from "./Social";
 
 export function Footer() {
   return (
-    <div className="w-full flex flex-col items-center justify-center p-8 gap-4">
-      <ul className="flex md:hidden gap-6">
+    <div className="absolute bottom-6 w-full flex flex-col items-center justify-center">
+      <ul className="flex md:hidden gap-6 mb-2">
         {SocialList.map(item => {
           const { icon: Icon } = item;
 
           return (
-            <li>
+            <li key={item.name}>
               <a 
                 target="_blank" href={item.link} aria-label={item.name} rel="noreferrer"
               >

@@ -1,6 +1,5 @@
 "use client"
 // countup
-import CountUp from 'react-countup';
 // intersection observer hook
 import { useInView } from 'react-intersection-observer';
 // motion
@@ -33,14 +32,10 @@ export function About() {
             <p className='mb-2'>I am a skilled programmer specialized in web development, working proficiently with ReactJS, NextJS, NodeJS and other JavaScript technologies. focused on creating a efficient and maintainable code, ensuring the delivery of high-quality software products. building dynamic, responsive, feature-rich, high-performance front-end applications and robust and scalable backend solutions.</p>
             <p className='mt-4'>Here are a few technologies I’ve been working with recently:</p> 
 
-            <motion.ul 
-              variants={fadeIn('left', 0.6)}
-              initial="hidden"
-              whileInView={"show"}
-              viewport={{ once: false, amount: 0.3 }}
+            <ul 
               className='grid grid-cols-3 my-4'
             >
-              <li className='flex items-center text-slate-400'><AiOutlineCaretRight color="#38BDF8" fontSize={8} /> Javascript (ES6+)</li>
+              <li className='flex items-center text-slate-400'><AiOutlineCaretRight color="#38BDF8" fontSize={8} /> Javascript</li>
               <li className='flex items-center text-slate-400'><AiOutlineCaretRight color="#38BDF8" fontSize={8} /> Typescript</li>
               <li className='flex items-center text-slate-400'><AiOutlineCaretRight color="#38BDF8" fontSize={8} /> React</li>
               <li className='flex items-center text-slate-400'><AiOutlineCaretRight color="#38BDF8" fontSize={8} /> NextJS</li>
@@ -49,9 +44,9 @@ export function About() {
               <li className='flex items-center text-slate-400'><AiOutlineCaretRight color="#38BDF8" fontSize={8} /> Nest.js</li>
               <li className='flex items-center text-slate-400'><AiOutlineCaretRight color="#38BDF8" fontSize={8} /> SQL</li>
               <li className='flex items-center text-slate-400'><AiOutlineCaretRight color="#38BDF8" fontSize={8} /> MongoDB</li>
-            </motion.ul>
+            </ul>
 
-            <div className='flex gap-x-6 lg:gap-x-10 mt-6'>
+            {/* <div className='flex gap-x-6 lg:gap-x-10 mt-6'>
               <div>
                 <div 
                   className='text-[40px] font-tertiary text-gradient mb-2'
@@ -80,7 +75,7 @@ export function About() {
                   Completed
                 </div>
               </div>
-            </div>
+            </div> */}
           </motion.div>
 
           <motion.div 

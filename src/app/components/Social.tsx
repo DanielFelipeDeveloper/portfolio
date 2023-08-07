@@ -25,7 +25,7 @@ export function Social() {
           const { icon: Icon } = item;
 
           return (
-            <li>
+            <li key={item.name}>
               <a 
                 target="_blank" href={item.link} aria-label={item.name} rel="noreferrer"
               >
