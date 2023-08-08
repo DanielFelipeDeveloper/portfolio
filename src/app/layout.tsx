@@ -58,12 +58,12 @@ export default function RootLayout({
       </head>
       
       <body 
-        className={`relative ${fonts} min-h-screen`}
+        className={`${fonts}`}
       >
         <Header menuIsOpen={menuIsOpen} toggleMenu={toggleMenu} />
       
         <div 
-          className={`${menuIsOpen && 'blur overflow-hidden h-full'}`}
+          className={`${menuIsOpen ? 'blur overflow-hidden h-full' : ''}`}
         >
           {children}
         </div>

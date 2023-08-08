@@ -33,7 +33,7 @@ export function Work() {
             </div>
 
             <div className="group relative overflow-hidden border-2
-            border-white/50 rounded-xl w-full h-[280px]
+            border-white/50 rounded-xl h-screen max-h-[280px]
             cursor-pointer">
               <a href="https://github.com/bredacoder/podcastr-next" target='_blank'>
                 <div className="group-hover:bg-black/70 w-full h-full absolute
@@ -53,7 +53,7 @@ export function Work() {
 
                 <div className="absolute -bottom-full left-12
                 group-hover:bottom-8 transition-all duration-700 z-50">
-                  <span className="text-base font-secondary font-medium text-slate-400">ReactJS, NextJS, Typescript, Sass</span>
+                  <span className="text-sm font-secondary font-medium text-slate-400">ReactJS · NextJS · Typescript · ContextAPI · Sass</span>
                 </div>
               </a>
               
@@ -68,39 +68,53 @@ export function Work() {
             className="flex-1 flex flex-col gap-y-10 mt-auto"
           >
             <div className="group relative overflow-hidden border-2
-              border-white/50 rounded-xl max-h-[280px]">
-                <div className="group-hover:bg-black/70 w-full h-full absolute
-                z-40 transition-all duration-300"/>
+              border-white/50 rounded-xl h-screen max-h-[280px]">
+                <a href="https://ignews-sigma-one.vercel.app/" target='_blank'>
+                  <div className="group-hover:bg-black/70 w-full h-full absolute
+                  z-40 transition-all duration-300"/>
 
-                <img src="assets/portfolio-img2.png" alt="image" className="group-hover:scale-125 transition-all duration-500"/>
+                  <img src="assets/ig.news.png" alt="image" className="object-cover w-full h-full group-hover:scale-125 transition-all duration-500"/>
 
-                <div className="absolute -bottom-full left-12
-                group-hover:bottom-24 transition-all duration-500 z-50">
-                  <span className="text-gradient">UI/UX Design</span>
-                </div>
+                  <div className="absolute -bottom-full left-12
+                  group-hover:bottom-24 transition-all duration-500 z-50">
+                    <span className="text-gradient">Frontend Development</span>
+                  </div>
 
-                <div className="absolute -bottom-full left-12
-                group-hover:bottom-14 transition-all duration-700 z-50">
-                  <span className="text-3xl text-white">Project Title</span>
-                </div>
+                  <div className="absolute -bottom-full left-12
+                  group-hover:bottom-14 transition-all duration-700 z-50">
+                    <span className="text-3xl text-white">ig.news</span>
+                  </div>
+
+                  <div className="absolute -bottom-full left-12
+                  group-hover:bottom-8 transition-all duration-700 z-50">
+                    <span className="text-sm font-secondary font-medium text-slate-400">ReactJS · NextJS · SASS · NextAuth · Prismic · Jest · FaunaDB · Stripe</span>
+                  </div>
+                </a>
             </div>
 
             <div className="group relative overflow-hidden border-2
-            border-white/50 rounded-xl h-full max-h-[280px]">
-              <div className="group-hover:bg-black/70 w-full h-full absolute
-              z-40 transition-all duration-300"/>
+            border-white/50 rounded-xl h-screen max-h-[280px]">
+               <a href="https://github.com/bredacoder/ignite-reactjs-dashgo/" target='_blank'>
+                  <div className="group-hover:bg-black/70 w-full h-full absolute
+                  z-40 transition-all duration-300"/>
 
-              <img src="assets/portfolio-img3.png" alt="image" className="group-hover:scale-125 transition-all duration-500"/>
+                  <img src="assets/dashgo.png" alt="image" className="object-cover w-full h-full group-hover:scale-125 transition-all duration-500"/>
 
-              <div className="absolute -bottom-full left-12
-              group-hover:bottom-24 transition-all duration-500 z-50">
-                <span className="text-gradient">UI/UX Design</span>
-              </div>
+                  <div className="absolute -bottom-full left-12
+                  group-hover:bottom-24 transition-all duration-500 z-50">
+                    <span className="text-gradient">Frontend Development</span>
+                  </div>
 
-              <div className="absolute -bottom-full left-12
-              group-hover:bottom-14 transition-all duration-700 z-50">
-                <span className="text-3xl text-white">Project Title</span>
-              </div>
+                  <div className="absolute -bottom-full left-12
+                  group-hover:bottom-14 transition-all duration-700 z-50">
+                    <span className="text-3xl text-white">Dashgo</span>
+                  </div>
+
+                  <div className="absolute -bottom-full left-12
+                  group-hover:bottom-8 transition-all duration-700 z-50">
+                    <span className="text-sm font-secondary font-medium text-slate-400">ReactJS · NextJS · ChakraUI</span>
+                  </div>
+                </a>
             </div>
           </motion.div>
         </div>

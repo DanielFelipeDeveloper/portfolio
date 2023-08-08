@@ -6,6 +6,7 @@ html {
   scrollbar-width: thin;
   scrollbar-color: #475569;
 }
+
 ::-webkit-scrollbar {
   width: 12px;
 }
@@ -75,10 +76,13 @@ html {
 
 @layer base {
   body {
-    @apply font-secondary text-lg leading-8 text-slate-200 bg-slate-900;
+    @apply relative font-secondary text-lg leading-8 text-slate-200 bg-slate-900 h-screen overflow-x-hidden;
   }
   p {
     @apply text-[18px] text-slate-400 font-medium;
+  }
+  table, th, td {
+    @apply px-2 py-3;
   }
   .h2 {
     @apply font-primary text-[32px] mb-6 tracking-[10%] uppercase;
