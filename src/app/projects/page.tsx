@@ -87,7 +87,7 @@ export default function Projects() {
 
           <tbody>
             {ProjectsList.map(project => (
-              <tr className='hover:bg-[#112240] transition-all'>
+              <tr key={project.name} className='hover:bg-[#112240] transition-all'>
                 <td className='text-accent font-semibold text-lg rounded-s-md'>{project.year}</td>
                 <td className='font-semibold text-xl'>{project.name}</td>
                 <td className='hidden md:table-cell text-slate-400 font-medium text-base'>{project.madeAt}</td>

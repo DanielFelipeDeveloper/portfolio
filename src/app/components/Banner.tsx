@@ -6,6 +6,7 @@ import { motion } from 'framer-motion'
 // Variants
 import { fadeIn } from '../variants'
 // react scroll
+import Link from 'next/link'
 import ScrollInto from 'react-scroll-into-view'
 
 export function Banner() {
@@ -76,16 +77,20 @@ export function Banner() {
                 selector='#contact'
                 smooth
               >
-                 <button className='btn btn-lg'>Contact me</button>
+                <Link href="#contact">
+                  <button className='btn btn-lg'>Contact me</button>
+                </Link>
               </ScrollInto>
 
               <ScrollInto 
                 selector="#experience"
                 smooth
               >
-                <p className='text-gradient-link btn-link cursor-pointer'>
-                  Experience
-                </p>
+                <Link href="#experience">
+                  <p className='text-gradient-link btn-link cursor-pointer'>
+                    Experience
+                  </p>
+                </Link>
               </ScrollInto>
             </motion.div>
           </div>

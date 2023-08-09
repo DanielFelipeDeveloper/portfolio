@@ -92,7 +92,9 @@ export function Header({ toggleMenu, menuIsOpen }: HeaderProps) {
                   smooth
                   className="p-2 font-medium transition-all hover:text-sky-400 cursor-pointer"
                 >
-                  {item.name}
+                  <Link href={`/#${item.link}`}>
+                    {item.name}
+                  </Link>
                 </ScrollInto>
               </li>
             </ul>

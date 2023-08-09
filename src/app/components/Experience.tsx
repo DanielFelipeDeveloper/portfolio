@@ -6,6 +6,7 @@ import { BsArrowUpRight } from "react-icons/bs";
 // variants
 import { fadeIn } from "../variants";
 // react scroll
+import Link from 'next/link';
 import ScrollInto from 'react-scroll-into-view';
 
 const services = [
@@ -43,7 +44,9 @@ export function Experience() {
               selector='#work'
               smooth
             >
-              <button className="btn btn-sm">See my work</button>
+              <Link href="#work">
+                <button className="btn btn-sm">See my work</button>
+              </Link>
             </ScrollInto>
           </motion.div>
 
