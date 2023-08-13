@@ -1,54 +1,50 @@
 'use client'
-import { Aldrich, Orbitron, Rajdhani } from 'next/font/google';
-import { ReactNode, useEffect, useState } from 'react';
-import { Email } from './components/Email';
-import { Footer } from './components/Footer';
-import { Header } from './components/Header';
-import { Social } from './components/Social';
-import './globals.css';
+import { Aldrich, Orbitron, Rajdhani } from 'next/font/google'
+import { ReactNode, useEffect, useState } from 'react'
+import { Email } from './components/Email'
+import { Footer } from './components/Footer'
+import { Header } from './components/Header'
+import { Social } from './components/Social'
+import './globals.css'
 
-const orbitron = Orbitron({ 
-  subsets: ['latin'], 
+const orbitron = Orbitron({
+  subsets: ['latin'],
   weight: ['400', '500', '600', '700', '800', '900'],
-  variable: '--orbitron', 
+  variable: '--orbitron',
 })
-const rajdhani = Rajdhani({ 
-  subsets: ['latin'], 
+const rajdhani = Rajdhani({
+  subsets: ['latin'],
   weight: ['300', '400', '500', '600', '700'],
-  variable: '--rajdhani' 
+  variable: '--rajdhani',
 })
-const aldrich = Aldrich({ 
-  subsets: ['latin'], 
+const aldrich = Aldrich({
+  subsets: ['latin'],
   weight: '400',
-  variable: '--aldrich'
+  variable: '--aldrich',
 })
 
-export default function RootLayout({
-  children,
-}: {
-  children: ReactNode
-}) {
-  const [menuIsOpen, setMenuIsOpen] = useState(false);
+export default function RootLayout({ children }: { children: ReactNode }) {
+  const [menuIsOpen, setMenuIsOpen] = useState(false)
 
-  const toggleMenu = () => setMenuIsOpen(!menuIsOpen);
+  const toggleMenu = () => setMenuIsOpen(!menuIsOpen)
 
   const handleResize = (e: UIEvent) => {
-    const w = e.currentTarget as Window;
+    const w = e.currentTarget as Window
 
     if (w.innerWidth > 768) {
-      setMenuIsOpen(false);
+      setMenuIsOpen(false)
     }
   }
 
   useEffect(() => {
-    window.addEventListener('resize', handleResize);
+    window.addEventListener('resize', handleResize)
 
     return () => {
-      window.removeEventListener('resize', handleResize);
-    };
+      window.removeEventListener('resize', handleResize)
+    }
   })
 
-  const fonts = `${orbitron.variable} ${rajdhani.variable} ${aldrich.variable}`;
+  const fonts = `${orbitron.variable} ${rajdhani.variable} ${aldrich.variable}`
 
   return (
     <html lang="en">
@@ -56,15 +52,11 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" />
         <title>Daniel Breda</title>
       </head>
-      
-      <body 
-        className={`${fonts}`}
-      >
+
+      <body className={`${fonts}`}>
         <Header menuIsOpen={menuIsOpen} toggleMenu={toggleMenu} />
-      
-        <div 
-          className={`${menuIsOpen ? 'blur overflow-hidden h-full' : ''}`}
-        >
+
+        <div className={`${menuIsOpen ? 'h-full overflow-hidden blur' : ''}`}>
           {children}
         </div>
 

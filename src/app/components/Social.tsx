@@ -1,4 +1,4 @@
-import { FiGithub, FiLinkedin } from "react-icons/fi";
+import { FiGithub, FiLinkedin } from 'react-icons/fi'
 
 export const SocialList = [
   {
@@ -11,25 +11,32 @@ export const SocialList = [
     link: 'https://linkedin.com/in/bredacoder',
     icon: FiLinkedin,
   },
-];
+]
 
 export function Social() {
   return (
     <div
-      className='hidden md:block fixed items-center w-10 bottom-0 left-2 lg:left-10 right-auto z-20 text-slate-400
-      after:content-[""] after:block after:w-[1px] after:h-28 after:bg-slate-400
-      after:mx-auto'
+      className='fixed bottom-0 left-2 right-auto z-20 hidden w-10 items-center text-slate-400 after:mx-auto after:block
+      after:h-28 after:w-[1px] after:bg-slate-400 after:content-[""] md:block
+      lg:left-10'
     >
-      <ul className='flex mb-10 flex-col gap-6 text-center items-center justify-center'>
-        {SocialList.map(item => {
-          const { icon: Icon } = item;
+      <ul className="mb-10 flex flex-col items-center justify-center gap-6 text-center">
+        {SocialList.map((item) => {
+          const { icon: Icon } = item
 
           return (
             <li key={item.name}>
-              <a 
-                target="_blank" href={item.link} aria-label={item.name} rel="noreferrer"
+              <a
+                target="_blank"
+                href={item.link}
+                aria-label={item.name}
+                rel="noreferrer"
               >
-                <Icon title={item.name} className="hover:text-accent transition-all hover:translate-y-[-2px]" size={22} />
+                <Icon
+                  title={item.name}
+                  className="transition-all hover:translate-y-[-2px] hover:text-accent"
+                  size={22}
+                />
               </a>
             </li>
           )

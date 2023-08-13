@@ -1,7 +1,8 @@
-"use client"
+'use client'
 // motion
 import { motion } from 'framer-motion'
 // variant
+import Image from 'next/image'
 import Link from 'next/link'
 import { fadeIn } from '../variants'
 
@@ -9,13 +10,13 @@ export function Work() {
   return (
     <section className="section" id="work">
       <div className="container mx-auto">
-        <div className="flex flex-col lg:flex-row gap-x-10">
+        <div className="flex flex-col gap-x-10 lg:flex-row">
           <motion.div
             variants={fadeIn('right', 0.5)}
             initial="hidden"
-            whileInView={"show"}
+            whileInView={'show'}
             viewport={{ once: false, amount: 0.3 }}
-            className="flex-1 flex flex-col gap-y-12 mb-10 lg:mb-0 mt-auto"
+            className="mb-10 mt-auto flex flex-1 flex-col gap-y-12 lg:mb-0"
           >
             <div>
               <h2 className="h2 leading-tight text-accent">
@@ -23,7 +24,7 @@ export function Work() {
                 Work.
               </h2>
 
-              <p className="max-w-sm mb-24">
+              <p className="mb-24 max-w-sm">
                 See here some of my most recent works!
               </p>
 
@@ -32,89 +33,136 @@ export function Work() {
               </Link>
             </div>
 
-            <div className="group relative overflow-hidden border-2
-            border-white/50 rounded-xl h-screen max-h-[280px]
-            cursor-pointer">
-              <a href="https://github.com/bredacoder/podcastr-next" target='_blank'>
-                <div className="group-hover:bg-black/70 w-full h-full absolute
-                z-40 transition-all duration-300"/>
+            <div
+              className="group relative h-screen max-h-[280px]
+            cursor-pointer overflow-hidden rounded-xl border-2
+            border-white/50"
+            >
+              <a
+                href="https://github.com/bredacoder/podcastr-next"
+                target="_blank"
+              >
+                <div
+                  className="absolute z-40 h-full w-full
+                transition-all duration-300 group-hover:bg-black/70"
+                />
 
-                <img src="assets/podcastr-1.png" alt="image" className="object-cover w-full h-full group-hover:scale-125 transition-all duration-500"/>
+                <div className="relative h-full w-full object-cover transition-all duration-500 group-hover:scale-125">
+                  <Image src="/assets/podcastr-1.png" alt="image" fill />
+                </div>
 
-                <div className="absolute -bottom-full left-12
-                group-hover:bottom-24 transition-all duration-500 z-50">
+                <div
+                  className="absolute -bottom-full left-12
+                z-50 transition-all duration-500 group-hover:bottom-24"
+                >
                   <span className="text-gradient">Frontend Development</span>
                 </div>
 
-                <div className="absolute -bottom-full left-12
-                group-hover:bottom-14 transition-all duration-700 z-50">
+                <div
+                  className="absolute -bottom-full left-12
+                z-50 transition-all duration-700 group-hover:bottom-14"
+                >
                   <span className="text-3xl text-white">Podcastr</span>
                 </div>
 
-                <div className="absolute -bottom-full left-12
-                group-hover:bottom-8 transition-all duration-700 z-50">
-                  <span className="text-sm font-secondary font-medium text-slate-400">ReactJS · NextJS · Typescript · ContextAPI · Sass</span>
+                <div
+                  className="absolute -bottom-full left-12
+                z-50 transition-all duration-700 group-hover:bottom-8"
+                >
+                  <span className="font-secondary text-sm font-medium text-slate-400">
+                    ReactJS · NextJS · Typescript · ContextAPI · Sass
+                  </span>
                 </div>
               </a>
-              
             </div>
           </motion.div>
 
           <motion.div
             variants={fadeIn('left', 0.5)}
             initial="hidden"
-            whileInView={"show"}
+            whileInView={'show'}
             viewport={{ once: false, amount: 0.3 }}
-            className="flex-1 flex flex-col gap-y-10 mt-auto"
+            className="mt-auto flex flex-1 flex-col gap-y-10"
           >
-            <div className="group relative overflow-hidden border-2
-              border-white/50 rounded-xl h-screen max-h-[280px]">
-                <a href="https://ignews-sigma-one.vercel.app/" target='_blank'>
-                  <div className="group-hover:bg-black/70 w-full h-full absolute
-                  z-40 transition-all duration-300"/>
+            <div
+              className="group relative h-screen max-h-[280px]
+              overflow-hidden rounded-xl border-2 border-white/50"
+            >
+              <a href="https://ignews-sigma-one.vercel.app/" target="_blank">
+                <div
+                  className="absolute z-40 h-full w-full
+                  transition-all duration-300 group-hover:bg-black/70"
+                />
 
-                  <img src="assets/ig.news.png" alt="image" className="object-cover w-full h-full group-hover:scale-125 transition-all duration-500"/>
+                <div className="relative h-full w-full object-cover transition-all duration-500 group-hover:scale-125">
+                  <Image src="/assets/ig.news.png" alt="image" fill />
+                </div>
+                <div
+                  className="absolute -bottom-full left-12
+                  z-50 transition-all duration-500 group-hover:bottom-24"
+                >
+                  <span className="text-gradient">Frontend Development</span>
+                </div>
 
-                  <div className="absolute -bottom-full left-12
-                  group-hover:bottom-24 transition-all duration-500 z-50">
-                    <span className="text-gradient">Frontend Development</span>
-                  </div>
+                <div
+                  className="absolute -bottom-full left-12
+                  z-50 transition-all duration-700 group-hover:bottom-14"
+                >
+                  <span className="text-3xl text-white">ig.news</span>
+                </div>
 
-                  <div className="absolute -bottom-full left-12
-                  group-hover:bottom-14 transition-all duration-700 z-50">
-                    <span className="text-3xl text-white">ig.news</span>
-                  </div>
-
-                  <div className="absolute -bottom-full left-12
-                  group-hover:bottom-8 transition-all duration-700 z-50">
-                    <span className="text-sm font-secondary font-medium text-slate-400">ReactJS · NextJS · SASS · NextAuth · Prismic · Jest · FaunaDB · Stripe</span>
-                  </div>
-                </a>
+                <div
+                  className="absolute -bottom-full left-12
+                  z-50 transition-all duration-700 group-hover:bottom-8"
+                >
+                  <span className="font-secondary text-sm font-medium text-slate-400">
+                    ReactJS · NextJS · SASS · NextAuth · Prismic · Jest ·
+                    FaunaDB · Stripe
+                  </span>
+                </div>
+              </a>
             </div>
 
-            <div className="group relative overflow-hidden border-2
-            border-white/50 rounded-xl h-screen max-h-[280px]">
-               <a href="https://github.com/bredacoder/ignite-reactjs-dashgo/" target='_blank'>
-                  <div className="group-hover:bg-black/70 w-full h-full absolute
-                  z-40 transition-all duration-300"/>
+            <div
+              className="group relative h-screen max-h-[280px]
+            overflow-hidden rounded-xl border-2 border-white/50"
+            >
+              <a
+                href="https://github.com/bredacoder/ignite-reactjs-dashgo/"
+                target="_blank"
+              >
+                <div
+                  className="absolute z-40 h-full w-full
+                  transition-all duration-300 group-hover:bg-black/70"
+                />
 
-                  <img src="assets/dashgo.png" alt="image" className="object-cover w-full h-full group-hover:scale-125 transition-all duration-500"/>
+                <div className="relative h-full w-full object-cover transition-all duration-500 group-hover:scale-125">
+                  <Image src="/assets/dashgo.png" alt="image" fill />
+                </div>
 
-                  <div className="absolute -bottom-full left-12
-                  group-hover:bottom-24 transition-all duration-500 z-50">
-                    <span className="text-gradient">Frontend Development</span>
-                  </div>
+                <div
+                  className="absolute -bottom-full left-12
+                  z-50 transition-all duration-500 group-hover:bottom-24"
+                >
+                  <span className="text-gradient">Frontend Development</span>
+                </div>
 
-                  <div className="absolute -bottom-full left-12
-                  group-hover:bottom-14 transition-all duration-700 z-50">
-                    <span className="text-3xl text-white">Dashgo</span>
-                  </div>
+                <div
+                  className="absolute -bottom-full left-12
+                  z-50 transition-all duration-700 group-hover:bottom-14"
+                >
+                  <span className="text-3xl text-white">Dashgo</span>
+                </div>
 
-                  <div className="absolute -bottom-full left-12
-                  group-hover:bottom-8 transition-all duration-700 z-50">
-                    <span className="text-sm font-secondary font-medium text-slate-400">ReactJS · NextJS · ChakraUI</span>
-                  </div>
-                </a>
+                <div
+                  className="absolute -bottom-full left-12
+                  z-50 transition-all duration-700 group-hover:bottom-8"
+                >
+                  <span className="font-secondary text-sm font-medium text-slate-400">
+                    ReactJS · NextJS · ChakraUI
+                  </span>
+                </div>
+              </a>
             </div>
           </motion.div>
         </div>

@@ -1,19 +1,25 @@
-import { SocialList } from "./Social";
-
+import { SocialList } from './Social'
 
 export function Footer() {
   return (
-    <div className="absolute bottom-6 w-full flex flex-col items-center justify-center">
-      <ul className="flex md:hidden gap-6 mb-2">
-        {SocialList.map(item => {
-          const { icon: Icon } = item;
+    <div className="absolute bottom-6 flex w-full flex-col items-center justify-center">
+      <ul className="mb-2 flex gap-6 md:hidden">
+        {SocialList.map((item) => {
+          const { icon: Icon } = item
 
           return (
             <li key={item.name}>
-              <a 
-                target="_blank" href={item.link} aria-label={item.name} rel="noreferrer"
+              <a
+                target="_blank"
+                href={item.link}
+                aria-label={item.name}
+                rel="noreferrer"
               >
-                <Icon title={item.name} className="text-slate-400 hover:text-accent transition-all hover:translate-y-[-2px]" size={22} />
+                <Icon
+                  title={item.name}
+                  className="text-slate-400 transition-all hover:translate-y-[-2px] hover:text-accent"
+                  size={22}
+                />
               </a>
             </li>
           )
