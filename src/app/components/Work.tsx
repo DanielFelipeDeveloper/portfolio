@@ -48,7 +48,12 @@ export function Work() {
                 />
 
                 <div className="relative h-full w-full object-cover transition-all duration-500 group-hover:scale-125">
-                  <Image src="/assets/podcastr-1.png" alt="image" fill />
+                  <Image
+                    src="/assets/podcastr-1.png"
+                    alt="image"
+                    fill
+                    objectFit="cover"
+                  />
                 </div>
 
                 <div
@@ -95,7 +100,12 @@ export function Work() {
                 />
 
                 <div className="relative h-full w-full object-cover transition-all duration-500 group-hover:scale-125">
-                  <Image src="/assets/ig.news.png" alt="image" fill />
+                  <Image
+                    src="/assets/ig.news.png"
+                    alt="image"
+                    fill
+                    objectFit="cover"
+                  />
                 </div>
                 <div
                   className="absolute -bottom-full left-12
@@ -116,8 +126,7 @@ export function Work() {
                   z-50 transition-all duration-700 group-hover:bottom-8"
                 >
                   <span className="font-secondary text-sm font-medium text-slate-400">
-                    ReactJS · NextJS · SASS · NextAuth · Prismic · Jest ·
-                    FaunaDB · Stripe
+                    ReactJS · NextJS · SASS · NextAuth · Prismic · Stripe
                   </span>
                 </div>
               </a>
@@ -128,7 +137,7 @@ export function Work() {
             overflow-hidden rounded-xl border-2 border-white/50"
             >
               <a
-                href="https://github.com/bredacoder/ignite-reactjs-dashgo/"
+                href="https://ecommerce-shopify-bredacoder.vercel.app/"
                 target="_blank"
               >
                 <div
@@ -137,7 +146,12 @@ export function Work() {
                 />
 
                 <div className="relative h-full w-full object-cover transition-all duration-500 group-hover:scale-125">
-                  <Image src="/assets/dashgo.png" alt="image" fill />
+                  <Image
+                    src="/assets/digital-design.png"
+                    alt="image"
+                    objectFit="cover"
+                    fill
+                  />
                 </div>
 
                 <div
@@ -151,7 +165,9 @@ export function Work() {
                   className="absolute -bottom-full left-12
                   z-50 transition-all duration-700 group-hover:bottom-14"
                 >
-                  <span className="text-3xl text-white">Dashgo</span>
+                  <span className="text-3xl text-white">
+                    Digital Design Ecommerce
+                  </span>
                 </div>
 
                 <div
@@ -159,7 +175,7 @@ export function Work() {
                   z-50 transition-all duration-700 group-hover:bottom-8"
                 >
                   <span className="font-secondary text-sm font-medium text-slate-400">
-                    ReactJS · NextJS · ChakraUI
+                    ReactJS · NextJS · Typescript · TailwindCSS · GraphQL
                   </span>
                 </div>
               </a>
