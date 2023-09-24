@@ -53,4 +53,28 @@ const experiences = [
   },
 ]
 
-export { experiences }
+const latestWork = [
+  {
+    type: 'Frontend Development',
+    link: 'https://podcastr-next-bredacoder.vercel.app/',
+    image: '/assets/podcastr-1.png',
+    name: 'Podcastr',
+    skills: 'ReactJS · NextJS · Typescript · ContextAPI · Sass',
+  },
+  {
+    type: 'Frontend Development',
+    link: 'https://ignews-sigma-one.vercel.app/',
+    image: '/assets/ig.news.png',
+    name: 'ig.news',
+    skills: 'ReactJS · NextJS · SASS · NextAuth · Prismic · Stripe',
+  },
+  {
+    type: 'Frontend Development',
+    link: 'https://ecommerce-shopify-bredacoder.vercel.app/',
+    image: '/assets/digital-design.png',
+    name: 'Digital Design Ecommerce',
+    skills: 'ReactJS · NextJS · Typescript · TailwindCSS · GraphQL',
+  },
+]
+
+export { experiences, latestWork }
