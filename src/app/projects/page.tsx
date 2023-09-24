@@ -2,48 +2,8 @@
 import { motion } from 'framer-motion'
 import { FaArrowUpRightFromSquare } from 'react-icons/fa6'
 import { FiGithub } from 'react-icons/fi'
+import { projectsList } from '../constants'
 import { fadeIn } from '../variants'
-
-const ProjectsList = [
-  {
-    year: '2023',
-    name: 'ig.news',
-    madeAt: 'Personal Project',
-    techs:
-      'ReactJS · NextJS · SASS · NextAuth · Prismic · Typescript · FaunaDB · Stripe',
-    link: 'https://ignews-sigma-one.vercel.app/',
-    github: 'https://github.com/bredacoder/ignite-reactjs-ignews',
-  },
-  {
-    year: '2023',
-    name: 'GoBarber',
-    madeAt: 'Personal Project',
-    techs: 'ReactJS · Styled Components · Typescript · NodeJS',
-    github: 'https://github.com/bredacoder/gobarber',
-  },
-  {
-    year: '2023',
-    name: 'Github Explorer',
-    madeAt: 'Personal Project',
-    techs: 'ReactJS · CSS Modules · Typescript',
-    github: 'https://github.com/bredacoder/ignite-reactjs-github-explorer',
-  },
-  {
-    year: '2023',
-    name: 'Dt Money',
-    madeAt: 'Personal Project',
-    techs: 'ReactJS · MirageJS · Typescript · StyledComponents',
-    github: 'https://github.com/bredacoder/ignite-reactjs-dtmoney',
-  },
-  {
-    year: '2023',
-    name: 'Dashgo',
-    madeAt: 'Personal Project',
-    techs:
-      'ReactJS · NextJS · ChakraUI · Typescript · Yup · MirageJS · React Query',
-    github: 'https://github.com/bredacoder/ignite-reactjs-dashgo',
-  },
-]
 
 export default function Projects() {
   return (
@@ -87,7 +47,7 @@ export default function Projects() {
           </thead>
 
           <tbody>
-            {ProjectsList.map((project) => (
+            {projectsList.map((project) => (
               <tr
                 key={project.name}
                 className="transition-all hover:bg-[#112240]"

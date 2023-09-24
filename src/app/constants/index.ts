@@ -77,4 +77,64 @@ const latestWork = [
   },
 ]
 
-export { experiences, latestWork }
+const projectsList = [
+  {
+    year: '2023',
+    name: 'ig.news',
+    madeAt: 'Personal Project',
+    techs:
+      'ReactJS · NextJS · SASS · NextAuth · Prismic · Typescript · FaunaDB · Stripe',
+    link: 'https://ignews-sigma-one.vercel.app/',
+    github: 'https://github.com/bredacoder/ignite-reactjs-ignews',
+  },
+  {
+    year: '2023',
+    name: 'Dt Money',
+    madeAt: 'Personal Project',
+    techs: 'ReactJS · MirageJS · Typescript · StyledComponents',
+    link: 'https://breda-coder-dtmoney.vercel.app/',
+    github: 'https://github.com/bredacoder/ignite-reactjs-dtmoney',
+  },
+  {
+    year: '2023',
+    name: 'Github Explorer',
+    madeAt: 'Personal Project',
+    techs: 'ReactJS · CSS Modules · Typescript',
+    link: 'https://github-explorer-indol-nu.vercel.app/',
+    github: 'https://github.com/bredacoder/ignite-reactjs-github-explorer',
+  },
+  {
+    year: '2023',
+    name: 'World Trip',
+    madeAt: 'Personal Project',
+    techs: 'ReactJS · Typescript · ChakraUI',
+    link: 'https://bredacoder-worldtrip.vercel.app/',
+    github: 'https://github.com/bredacoder/ignite-reactjs-worldtrip',
+  },
+  {
+    year: '2023',
+    name: 'Space Travelling',
+    madeAt: 'Personal Project',
+    techs: 'ReactJS · NextJs · CSS Modules · Typescript',
+    link: 'https://ignite-reactjs-challenge05-spacetraveling.vercel.app/',
+    github:
+      'https://github.com/bredacoder/ignite-reactjs-challenge05-spacetraveling',
+  },
+  {
+    year: '2023',
+    name: 'GoBarber',
+    madeAt: 'Personal Project',
+    techs: 'ReactJS · Styled Components · Typescript · NodeJS',
+    github: 'https://github.com/bredacoder/gobarber',
+  },
+  {
+    year: '2023',
+    name: 'Dashgo',
+    madeAt: 'Personal Project',
+    techs:
+      'ReactJS · NextJS · ChakraUI · Typescript · Yup · MirageJS · React Query',
+    github: 'https://github.com/bredacoder/ignite-reactjs-dashgo',
+  },
+]
+
+export { experiences, latestWork, projectsList }
