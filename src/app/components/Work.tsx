@@ -49,10 +49,10 @@ export function Work() {
 
                 <div className="relative h-full w-full object-cover transition-all duration-500 group-hover:scale-125">
                   <Image
+                    className="object-cover"
                     src="/assets/podcastr-1.png"
                     alt="image"
                     fill
-                    objectFit="cover"
                   />
                 </div>
 
@@ -104,7 +104,7 @@ export function Work() {
                     src="/assets/ig.news.png"
                     alt="image"
                     fill
-                    objectFit="cover"
+                    className="object-cover"
                   />
                 </div>
                 <div
@@ -149,7 +149,7 @@ export function Work() {
                   <Image
                     src="/assets/digital-design.png"
                     alt="image"
-                    objectFit="cover"
+                    className="object-cover"
                     fill
                   />
                 </div>
