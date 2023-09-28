@@ -33,7 +33,7 @@ const experiences = [
     date: 'Dec 2020 - May 2023',
     points: [
       'Developing and maintaining custom Integrations, Automations, Webhooks, Restful APIs, API Gateways, Microservices and custom Frontends.',
-      'Responsible for creating and maintaining integrations with one of the two largest marketplaces in Brazil (Magazine Luiza and Via Varejo), generating daily revenue of more than R$100,000 for our client.',
+      'Responsible for creating and maintaining integrations with one of the two largest marketplaces in Brazil (Magazine Luiza and Via Varejo), generating daily revenue of more than R$50,000 for our client.',
       'Collaborating with cross-functional teams including product managers, and other developers to create high-quality solutions.',
       'Direct contact with clients, assisting in problem-solving, defining business rules and assisting in the entire process of projects',
     ],
