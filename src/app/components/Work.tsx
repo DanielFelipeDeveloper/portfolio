@@ -2,8 +2,6 @@
 // motion
 import { motion } from 'framer-motion'
 // variant
-import Image from 'next/image'
-import Link from 'next/link'
 import { fadeIn } from '../variants'
 
 import { latestWork } from '../constants'
@@ -30,15 +28,16 @@ export function Work() {
               </h2>
 
               <p className="mb-24 max-w-sm">
-                See here some of my most recent works!
+                I&apos;m updating this section, working on more relevant
+                projects!
               </p>
 
-              <Link href="/projects">
+              {/* <Link href="/projects">
                 <button className="btn btn-sm">View all projects</button>
-              </Link>
+              </Link> */}
             </div>
 
-            <div
+            {/* <div
               className="group relative h-screen max-h-[280px]
             cursor-pointer overflow-hidden rounded-xl border-2
             border-white/50"
@@ -81,10 +80,10 @@ export function Work() {
                   </span>
                 </div>
               </a>
-            </div>
+            </div> */}
           </motion.div>
 
-          <motion.div
+          {/* <motion.div
             variants={fadeIn('left', 0.5)}
             initial="hidden"
             whileInView={'show'}
@@ -136,7 +135,7 @@ export function Work() {
                 </a>
               </div>
             ))}
-          </motion.div>
+          </motion.div> */}
         </div>
       </div>
     </section>
