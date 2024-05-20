@@ -1,5 +1,5 @@
 'use client'
-import { Aldrich, Orbitron, Rajdhani } from 'next/font/google'
+import { Aldrich, Orbitron, Inter } from 'next/font/google'
 import { ReactNode, useEffect, useState } from 'react'
 import { Email } from './components/Email'
 import { Footer } from './components/Footer'
@@ -12,10 +12,10 @@ const orbitron = Orbitron({
   weight: ['400', '500', '600', '700', '800', '900'],
   variable: '--orbitron',
 })
-const rajdhani = Rajdhani({
+const inter = Inter({
   subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700'],
-  variable: '--rajdhani',
+  weight: ['400', '500', '700', '900'],
+  variable: '--inter',
 })
 const aldrich = Aldrich({
   subsets: ['latin'],
@@ -44,7 +44,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     }
   })
 
-  const fonts = `${orbitron.variable} ${rajdhani.variable} ${aldrich.variable}`
+  const fonts = `${orbitron.variable} ${inter.variable} ${aldrich.variable}`
 
   return (
     <html lang="en">

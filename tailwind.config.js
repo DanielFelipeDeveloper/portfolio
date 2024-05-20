@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     fontFamily: {
       primary: ['var(--orbitron)'],
-      secondary: ['var(--rajdhani)'],
+      secondary: ['var(--inter)'],
       tertiary: ['var(--aldrich)'],
     },
     container: {

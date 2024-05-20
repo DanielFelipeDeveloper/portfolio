@@ -16,7 +16,7 @@ export function Banner() {
         <div className="flex flex-row items-center gap-x-12 gap-y-8">
           <div className="flex-1 text-left font-secondary">
             <motion.h1
-              variants={fadeIn('up', 0.1)}
+              variants={fadeIn('left', 0.1)}
               initial="hidden"
               whileInView={'show'}
               viewport={{ once: false, amount: 0.7 }}
@@ -26,7 +26,7 @@ export function Banner() {
             </motion.h1>
 
             <motion.h1
-              variants={fadeIn('up', 0.2)}
+              variants={fadeIn('left', 0.2)}
               initial="hidden"
               whileInView={'show'}
               viewport={{ once: false, amount: 0.7 }}
@@ -37,7 +37,7 @@ export function Banner() {
 
             <motion.div
               className="mb-6 font-secondary text-[30px] font-bold leading-[1] md:text-[62px] lg:text-[80px]"
-              variants={fadeIn('up', 0.2)}
+              variants={fadeIn('left', 0.2)}
               initial="hidden"
               whileInView={'show'}
               viewport={{ once: false, amount: 0.7 }}
@@ -58,7 +58,7 @@ export function Banner() {
 
             <motion.p
               className="mb-8 max-w-xl lg:mx-0"
-              variants={fadeIn('up', 0.4)}
+              variants={fadeIn('left', 0.4)}
               initial="hidden"
               whileInView={'show'}
               viewport={{ once: false, amount: 0.7 }}
@@ -72,7 +72,7 @@ export function Banner() {
 
             <motion.div
               className="mx-0 mb-12 flex max-w-max items-center gap-x-6"
-              variants={fadeIn('up', 0.5)}
+              variants={fadeIn('left', 0.5)}
               initial="hidden"
               whileInView={'show'}
               viewport={{ once: false, amount: 0.7 }}

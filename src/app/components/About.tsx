@@ -30,7 +30,7 @@ export function About() {
           >
             <h2 className="h2 text-accent">About me.</h2>
             <h3 className="h3 mb-4">
-              I&apos;m a Software Engineer with over 3 years of experience.
+              I&apos;m a Software Engineer with over 5 years of experience.
             </h3>
             <p className="mb-2">
               I am a skilled programmer specialized in web development, working
